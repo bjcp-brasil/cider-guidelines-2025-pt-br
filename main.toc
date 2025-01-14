@@ -1,0 +1,28 @@
+\babel@toc {brazilian}{}\relax 
+\contentsline {section}{Introduction To The 2025 Cider Guidelines}{2}{section*.3}%
+\contentsline {section}{Introduction To Cider And Perry Styles (Categories C1-C4)}{2}{section*.5}%
+\contentsline {subsection}{Aroma and Flavor}{2}{section*.7}%
+\contentsline {subsection}{Appearance}{3}{section*.9}%
+\contentsline {subsection}{Mouthfeel}{3}{section*.11}%
+\contentsline {subsection}{Ingredients}{3}{section*.13}%
+\contentsline {subsection}{Entry Instructions}{4}{section*.15}%
+\contentsline {section}{C1. Traditional Cider}{5}{section*.17}%
+\contentsline {subsection}{C1A. Common Cider}{5}{section*.19}%
+\contentsline {subsection}{C1B. Heirloom Cider}{5}{section*.21}%
+\contentsline {subsection}{C1C. English Cider}{5}{section*.23}%
+\contentsline {subsection}{C1D. French Cider}{5}{section*.25}%
+\contentsline {subsection}{C1E. Spanish Cider}{5}{section*.27}%
+\contentsline {section}{C2. Strong Cider}{6}{section*.29}%
+\contentsline {subsection}{C2A. New England Cider}{6}{section*.31}%
+\contentsline {subsection}{C2B. Applewine}{6}{section*.33}%
+\contentsline {subsection}{C2C. Ice Cider}{6}{section*.35}%
+\contentsline {subsection}{C2D. Fire Cider}{6}{section*.37}%
+\contentsline {section}{C3. Specialty Cider}{7}{section*.39}%
+\contentsline {subsection}{C3A. Fruit Cider}{7}{section*.41}%
+\contentsline {subsection}{C3B. Spiced Cider}{7}{section*.43}%
+\contentsline {subsection}{C3C. Experimental Cider}{7}{section*.45}%
+\contentsline {section}{C4. Perry}{8}{section*.47}%
+\contentsline {subsection}{C4A. Common Perry}{8}{section*.49}%
+\contentsline {subsection}{C4B. Heirloom Perry}{8}{section*.51}%
+\contentsline {subsection}{C4C. Ice Perry}{8}{section*.53}%
+\contentsline {subsection}{C4D. Experimental Perry}{8}{section*.55}%

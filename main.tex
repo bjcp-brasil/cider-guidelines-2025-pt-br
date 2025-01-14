@@ -1,0 +1,71 @@
+\documentclass[a4paper, 9t]{article}
+\usepackage[brazilian]{babel}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{import}
+\usepackage{xcolor}
+\usepackage[a4paper, top=18mm,
+   bottom=15mm,
+   left=13mm,
+   right=13mm]{geometry}
+\usepackage{parskip}
+\usepackage{anyfontsize}
+\usepackage{hyperref}
+\usepackage[T1]{fontenc}
+\usepackage{array}
+\usepackage{longtable}
+\usepackage{color, colortbl}
+\usepackage{tocloft}
+\usepackage{mathptmx}
+\usepackage{makecell}
+\usepackage{enumitem}
+\usepackage{changepage}
+
+\usepackage{draftwatermark}
+\SetWatermarkText{DRAFT}
+\SetWatermarkScale{1.5}
+
+\fontfamily{georgia}\selectfont
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,
+    urlcolor=blue,
+    }
+\renewcommand*\contentsname{}
+\setlength{\parskip}{2pt}
+\setlength{\columnsep}{1cm}
+\newcommand\divisorLine{{\color{black} \rule{\linewidth}{0.1mm}}{\color{black} \rule{\linewidth}{0.1mm}}}
+
+\definecolor{darkgray}{rgb}{0.5, 0.5, 0.5}
+\definecolor{lightgray}{rgb}{0.75, 0.75, 0.75}
+
+\setlength{\cftbeforetoctitleskip}{-10pt}
+\setlength{\cftaftertoctitleskip}{0pt}
+
+\title{BJCP Diretrizes de Estilo de Sidra - Edição 2025}
+
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{ \textit{BJCP Diretrizes de Estilo de Sidra - Edição 2025} }
+\fancyfoot[R]{ \thepage\ }
+
+\begin{document}
+\raggedcolumns
+
+\input{frontpage.tex}
+\section*{Índice}
+\renewcommand\contentsname{}
+\tableofcontents
+
+\input{introduction-to-cider-and-perry-styles/index.tex}
+\input{introduction-to-the-2025-cider-guidelines/index.tex}
+\input{c1-traditional-cider/index.tex}
+\input{c2-strong-cider/index.tex}
+\input{c3-specialty-cider/index.tex}
+\input{c4-perry/index.tex}
+
+\end{document}
