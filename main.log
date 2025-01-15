@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.18)  14 JAN 2025 17:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2023.7.18)  15 JAN 2025 09:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -583,28 +583,28 @@ Overfull \hbox (523.53073pt too wide) in paragraph at lines 3--1
 [][][][][][] 
  []
 
-) (./c1-traditional-cider/c1-a-common-cider.tex) (./c1-traditional-cider/c1-b-heirloom-cider.tex) (./c1-traditional-cider/c1-c-english-cider.tex) (./c1-traditional-cider/c1-d-french-cider.tex) (./c1-traditional-cider/c1-e-spanish-cider.tex) [5
+) (./c1-traditional-cider/c1-a-common-cider.tex) (./c1-traditional-cider/c1-b-heirloom-cider.tex) (./c1-traditional-cider/c1-c-english-cider.tex [5
 
-]) (./c2-strong-cider/index.tex (./c2-strong-cider/header.tex
+]) (./c1-traditional-cider/c1-d-french-cider.tex) (./c1-traditional-cider/c1-e-spanish-cider.tex [6]) [7]) (./c2-strong-cider/index.tex (./c2-strong-cider/header.tex
 Overfull \hbox (523.53073pt too wide) in paragraph at lines 3--1
 [][][][][][] 
  []
 
-) (./c2-strong-cider/c2-a-new-england-cider.tex) (./c2-strong-cider/c2-b-applewine.tex) (./c2-strong-cider/c2-c-ice-cider.tex) (./c2-strong-cider/c2-d-fire-cider.tex) [6
+) (./c2-strong-cider/c2-a-new-england-cider.tex) (./c2-strong-cider/c2-b-applewine.tex) (./c2-strong-cider/c2-c-ice-cider.tex) (./c2-strong-cider/c2-d-fire-cider.tex) [8
 
 ]) (./c3-specialty-cider/index.tex (./c3-specialty-cider/header.tex
 Overfull \hbox (523.53073pt too wide) in paragraph at lines 3--1
 [][][][][][] 
  []
 
-) (./c3-specialty-cider/c3-a-fruit-cider.tex) (./c3-specialty-cider/c3-b-spiced-cider.tex) (./c3-specialty-cider/c3-c-experimental-cider.tex) [7
+) (./c3-specialty-cider/c3-a-fruit-cider.tex) (./c3-specialty-cider/c3-b-spiced-cider.tex) (./c3-specialty-cider/c3-c-experimental-cider.tex) [9
 
 ]) (./c4-perry/index.tex (./c4-perry/header.tex
 Overfull \hbox (523.53073pt too wide) in paragraph at lines 3--1
 [][][][][][] 
  []
 
-) (./c4-perry/c4-a-common-perry.tex) (./c4-perry/c4-b-heirloom-perry.tex) (./c4-perry/c4-c-ice-perry.tex) (./c4-perry/c4-d-experimental-perry.tex) [8
+) (./c4-perry/c4-a-common-perry.tex) (./c4-perry/c4-b-heirloom-perry.tex) (./c4-perry/c4-c-ice-perry.tex) (./c4-perry/c4-d-experimental-perry.tex) [10
 
 ]) (./main.aux)
  ***********
@@ -619,18 +619,18 @@ Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: E563300C303B2B6D80080BA5564FE770;4173.
  ) 
 Here is how much of TeX's memory you used:
- 12675 strings out of 476688
- 205344 string characters out of 5798779
+ 12683 strings out of 476688
+ 205437 string characters out of 5798779
  1941244 words of memory out of 5000000
- 33344 multiletter control sequences out of 15000+600000
+ 33350 multiletter control sequences out of 15000+600000
  614729 words of font info for 90 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  63i,12n,67p,1309b,728s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2023basic/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023basic/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/local/texlive/2023basic/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023basic/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (9 pages, 537756 bytes).
+Output written on main.pdf (11 pages, 553477 bytes).
 PDF statistics:
- 250 PDF objects out of 1000 (max. 8388607)
- 226 compressed objects within 3 object streams
- 64 named destinations out of 1000 (max. 500000)
+ 258 PDF objects out of 1000 (max. 8388607)
+ 232 compressed objects within 3 object streams
+ 66 named destinations out of 1000 (max. 500000)
  222 words of extra memory for PDF output out of 10000 (max. 10000000)
 

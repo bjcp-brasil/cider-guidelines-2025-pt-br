@@ -296,12 +296,15 @@ INPUT c1-traditional-cider/header.tex
 INPUT ./c1-traditional-cider/c1-a-common-cider.tex
 INPUT ./c1-traditional-cider/c1-a-common-cider.tex
 INPUT c1-traditional-cider/c1-a-common-cider.tex
+INPUT /usr/local/texlive/2023basic/texmf-dist/fonts/tfm/adobe/times/ptmbi8t.tfm
 INPUT ./c1-traditional-cider/c1-b-heirloom-cider.tex
 INPUT ./c1-traditional-cider/c1-b-heirloom-cider.tex
 INPUT c1-traditional-cider/c1-b-heirloom-cider.tex
 INPUT ./c1-traditional-cider/c1-c-english-cider.tex
 INPUT ./c1-traditional-cider/c1-c-english-cider.tex
 INPUT c1-traditional-cider/c1-c-english-cider.tex
+INPUT /usr/local/texlive/2023basic/texmf-dist/fonts/vf/adobe/times/ptmbi8t.vf
+INPUT /usr/local/texlive/2023basic/texmf-dist/fonts/tfm/adobe/times/ptmbi8r.tfm
 INPUT ./c1-traditional-cider/c1-d-french-cider.tex
 INPUT ./c1-traditional-cider/c1-d-french-cider.tex
 INPUT c1-traditional-cider/c1-d-french-cider.tex
@@ -332,7 +335,6 @@ INPUT c3-specialty-cider/index.tex
 INPUT ./c3-specialty-cider/header.tex
 INPUT ./c3-specialty-cider/header.tex
 INPUT c3-specialty-cider/header.tex
-INPUT /usr/local/texlive/2023basic/texmf-dist/fonts/tfm/adobe/times/ptmbi8t.tfm
 INPUT ./c3-specialty-cider/c3-a-fruit-cider.tex
 INPUT ./c3-specialty-cider/c3-a-fruit-cider.tex
 INPUT c3-specialty-cider/c3-a-fruit-cider.tex
@@ -342,8 +344,6 @@ INPUT c3-specialty-cider/c3-b-spiced-cider.tex
 INPUT ./c3-specialty-cider/c3-c-experimental-cider.tex
 INPUT ./c3-specialty-cider/c3-c-experimental-cider.tex
 INPUT c3-specialty-cider/c3-c-experimental-cider.tex
-INPUT /usr/local/texlive/2023basic/texmf-dist/fonts/vf/adobe/times/ptmbi8t.vf
-INPUT /usr/local/texlive/2023basic/texmf-dist/fonts/tfm/adobe/times/ptmbi8r.tfm
 INPUT ./c4-perry/index.tex
 INPUT ./c4-perry/index.tex
 INPUT c4-perry/index.tex
