@@ -45,29 +45,28 @@ jobs:
             -B html/updated-header.html
             -A assets/footer.html
             -c assets/style.css
-            introduction-to-the-2025-cider-guidelines/appearance.tex
-            introduction-to-the-2025-cider-guidelines/aroma-and-flavor.tex
-            introduction-to-the-2025-cider-guidelines/entry-instructions.tex
-            introduction-to-the-2025-cider-guidelines/header.tex
-            introduction-to-the-2025-cider-guidelines/index.tex
-            introduction-to-the-2025-cider-guidelines/ingredients.tex
-            introduction-to-the-2025-cider-guidelines/mouthfeel.tex
             introduction-to-cider-and-perry-styles/header.tex
+            introduction-to-the-2025-cider-guidelines/header.tex
+            introduction-to-the-2025-cider-guidelines/aroma-and-flavor.tex
+            introduction-to-the-2025-cider-guidelines/appearance.tex
+            introduction-to-the-2025-cider-guidelines/mouthfeel.tex
+            introduction-to-the-2025-cider-guidelines/ingredients.tex
+            introduction-to-the-2025-cider-guidelines/entry-instructions.tex
             c1-traditional-cider/header.tex
             c1-traditional-cider/c1-a-common-cider.tex
             c1-traditional-cider/c1-b-heirloom-cider.tex
             c1-traditional-cider/c1-c-english-cider.tex
             c1-traditional-cider/c1-d-french-cider.tex
             c1-traditional-cider/c1-e-spanish-cider.tex
+            c2-strong-cider/header.tex
             c2-strong-cider/c2-a-new-england-cider.tex
             c2-strong-cider/c2-b-applewine.tex
             c2-strong-cider/c2-c-ice-cider.tex
             c2-strong-cider/c2-d-fire-cider.tex
-            c2-strong-cider/header.tex
+            c3-specialty-cider/header.tex
             c3-specialty-cider/c3-a-fruit-cider.tex
             c3-specialty-cider/c3-b-spiced-cider.tex
             c3-specialty-cider/c3-c-experimental-cider.tex
-            c3-specialty-cider/header.tex
             c4-perry/header.tex
             c4-perry/c4-a-common-perry.tex
             c4-perry/c4-b-heirloom-perry.tex
