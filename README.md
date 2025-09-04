@@ -8,10 +8,10 @@ Temos também um espelho do Guia de Estilos no formato HTML para consulta rápid
 
 O projeto é um trabalho constante de melhoria. Apesar de o guia 2025 não ter atualizações frequentes, entendemos que a tradução sim. Temos as seguintes tarefas:
 
-- [] Terminar a tradução para PT-BR
-- [] Revisar tradução
-- [] Liberar versão 1.0 e colher feedbacks
-- [] Liberar a versão 1.1 com correções
+- [ ] Terminar a tradução para PT-BR
+- [ ] Revisar tradução
+- [ ] Liberar versão 1.0 e colher feedbacks
+- [ ] Liberar a versão 1.1 com correções
 - [ ] Melhorias e padronizações de vocabulário
 
 ## 😄 Quero contribuir
