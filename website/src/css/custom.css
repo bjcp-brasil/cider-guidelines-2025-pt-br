@@ -28,3 +28,14 @@
   --ifm-color-primary-lightest: #4fddbf;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+/* Logo do BJCP na capa: vem do PNG original em resolução alta
+   (1058x1025), sem isso ocupa a página inteira. Hoje é a única imagem
+   do guia — se mais imagens forem adicionadas, considerar um seletor
+   mais específico em vez de .markdown img global. */
+.markdown img {
+  max-width: 220px;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+}

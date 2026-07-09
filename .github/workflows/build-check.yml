@@ -1,13 +1,12 @@
-name: "[Piloto] Build Docusaurus"
+name: Validate Docusaurus build
 
-# Piloto avaliando Docusaurus como alternativa ao pandoc+sed pra gerar a
-# versão web do guia. Só builda e sobe como artifact pra inspeção manual —
-# NÃO faz deploy pro GitHub Pages (que continua servindo o resultado de
-# update-doc.yml a partir da main). Ver website/README.md para o plano de
-# promover isso a deploy de verdade.
+# Roda o mesmo pipeline de deploy-pages.yml (gerar markdown + build), mas
+# sem publicar — só pra pegar erro de build/link quebrado antes do merge
+# pra main. Substitui o antigo validate-syntax.yml (que validava o
+# pipeline pandoc+sed, aposentado).
 on:
   push:
-    branches: ["pilot/docusaurus"]
+    branches-ignore: ["main"]
   workflow_dispatch:
 
 permissions:
@@ -37,10 +36,3 @@ jobs:
       - name: Build do site
         working-directory: website
         run: npm run build
-
-      - name: Upload do build como artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: docusaurus-build
-          path: website/build
-          retention-days: 14

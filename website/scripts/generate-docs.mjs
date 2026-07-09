@@ -4,7 +4,7 @@
 // website/docs/, eles são recriados do zero a cada execução (ver
 // website/scripts/README.md).
 import {execFileSync} from 'node:child_process';
-import {mkdirSync, rmSync, writeFileSync, readFileSync, readdirSync} from 'node:fs';
+import {mkdirSync, rmSync, writeFileSync, readFileSync, readdirSync, copyFileSync} from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
 
@@ -74,8 +74,9 @@ function extractTitle(absTexPath) {
   return match[1].replace(/\\break/g, ' ').trim();
 }
 
-function yamlEscape(str) {
-  return `"${str.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
+function yamlEscape(value) {
+  if (typeof value !== 'string') return String(value);
+  return `"${value.replace(/\\/g, '\\\\').replace(/"/g, '\\"')}"`;
 }
 
 function writeMdWithFrontmatter(targetPath, title, body, extraFrontmatter = {}) {
@@ -94,6 +95,53 @@ console.log('Limpando website/docs/ ...');
 rmSync(docsDir, {recursive: true, force: true});
 mkdirSync(docsDir, {recursive: true});
 
+// frontpage.tex não segue o padrão \section*/\subsection* dos demais
+// arquivos (é a página de capa: título, logo, créditos de tradução,
+// versão, data, contato) — por isso é tratada à parte, fora do MANIFEST,
+// e vira a home do site ('/').
+console.log('[capa] frontpage.tex -> capa.md');
+const frontpageMd = pandocLatexToMd(path.join(repoRoot, 'frontpage.tex'))
+  // artefato do pandoc pra referência de figura do LaTeX, sem equivalente em markdown
+  .replace(/<span id="fig:bjcp-logo"[^>]*>.*?<\/span>\n?/, '')
+  // As 4 linhas de título da capa (hoje só bold, sem hierarquia) viram
+  // headings de verdade — mesmo tratamento que o pipeline HTML antigo já
+  // fazia via sed (ver docs/build/README.md), só que também cobrindo a
+  // linha "(incluindo Perada)", que a versão antiga deixava de fora.
+  // Usa tag HTML literal (não `#`/`##` do markdown) de propósito: assim
+  // não entra no TOC lateral autogerado do Docusaurus, que só olha
+  // headings em sintaxe markdown.
+  .replace(/<span>\*\*BEER JUDGE CERTIFICATION PROGRAM\*\*<\/span>\s*/, '<h1>BEER JUDGE CERTIFICATION PROGRAM</h1>\n\n')
+  .replace(/<span>\*\*Guia de Estilos 2025\*\*\s*<\/span>\s*/, '<h2>Guia de Estilos 2025</h2>\n\n')
+  .replace(/<span>\*\*Guia de Estilos de Sidra\*\*<\/span>\s*/, '<h3>Guia de Estilos de Sidra</h3>\n\n')
+  .replace(/<span>\*\*\(incluindo Perada\)\*\*<\/span>\s*/, '<h4>(incluindo Perada)</h4>\n\n')
+  // O resto dos <span> sem classe/estilo é o que sobra do
+  // \fontsize{}{}\selectfont do LaTeX (pandoc não tem pra onde mapear o
+  // tamanho de fonte). Como <span> é HTML inline, o MDX não separa em
+  // parágrafos as linhas em branco entre eles — tudo flui grudado em vez
+  // de virar blocos distintos. Como não carregam nenhum estilo de
+  // verdade, removemos e deixamos markdown puro, que respeita linha em
+  // branco = parágrafo novo.
+  .replace(/<\/?span[^>]*>/g, '')
+  // a imagem é referenciada como assets/bjcp-logo.png (relativo à raiz do
+  // repo); copiamos o arquivo pra perto do .md gerado e reescrevemos o
+  // caminho, pra o bundler do Docusaurus resolver o asset corretamente
+  // (inclusive respeitando o baseUrl) em vez de um link absoluto quebrado.
+  .replace('assets/bjcp-logo.png', './bjcp-logo.png');
+copyFileSync(path.join(repoRoot, 'assets/bjcp-logo.png'), path.join(docsDir, 'bjcp-logo.png'));
+writeMdWithFrontmatter(
+  path.join(docsDir, 'capa.md'),
+  'BJCP Diretrizes de Estilo de Sidra - Edição 2025',
+  frontpageMd,
+  {
+    slug: '/',
+    sidebar_position: 0,
+    sidebar_label: 'Capa',
+    // O próprio conteúdo da capa já traz o título em destaque (replica o
+    // layout do frontpage.tex); um <h1> automático em cima ficaria redundante.
+    hide_title: true,
+  },
+);
+
 MANIFEST.forEach((entry, index) => {
   const srcDir = path.join(repoRoot, entry.dir);
   const targetDir = path.join(docsDir, entry.slug);
@@ -110,10 +158,7 @@ MANIFEST.forEach((entry, index) => {
   console.log(`[${index + 1}/${MANIFEST.length}] ${entry.dir} -> ${entry.slug}/ ("${categoryLabel}")`);
 
   const headerMd = pandocLatexToMd(headerPath);
-  // A primeira categoria vira a home do site ('/'), já que o modo docs-only
-  // não tem homepage própria — sem isso o link da navbar/logo fica quebrado.
-  const extraFrontmatter = index === 0 ? {slug: '/'} : {};
-  writeMdWithFrontmatter(path.join(targetDir, 'index.md'), categoryLabel, headerMd, extraFrontmatter);
+  writeMdWithFrontmatter(path.join(targetDir, 'index.md'), categoryLabel, headerMd);
 
   const files =
     entry.files ??

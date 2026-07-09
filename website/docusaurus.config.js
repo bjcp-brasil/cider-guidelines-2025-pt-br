@@ -3,7 +3,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'BJCP Sidra 2025',
+  title: 'Guia de Estilos de Sidra BJCP - 2025',
   tagline: 'Diretrizes de Estilo de Sidra do BJCP - Tradução PT-BR',
   favicon: 'img/favicon.ico',
 
@@ -48,6 +48,22 @@ const config = {
     ],
   ],
 
+  themes: [
+    [
+      // Busca local, indexada no build — sem depender de serviço externo
+      // (Algolia exige cadastro/aprovação e uma API key de terceiro).
+      '@easyops-cn/docusaurus-search-local',
+      /** @type {import('@easyops-cn/docusaurus-search-local').PluginOptions} */
+      ({
+        hashed: true,
+        language: ['pt'],
+        indexDocs: true,
+        indexBlog: false,
+        docsRouteBasePath: '/',
+      }),
+    ],
+  ],
+
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
@@ -56,7 +72,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       navbar: {
-        title: 'BJCP Sidra 2025',
+        title: 'Guia de Estilos de Sidra BJCP - 2025',
         logo: {
           alt: 'Logo do BJCP',
           src: 'img/bjcp-logo.png',
