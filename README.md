@@ -23,6 +23,16 @@ Quer fazer parte desse projeto? Clique [aqui](CONTRIBUTING.md) e leia como contr
 O projeto é feito usando [LaTEX]().
 Caso você queira executar localmente esse projeto, recomendamos instalar a extensão do [VSCode](https://github.com/James-Yu/LaTeX-Workshop/wiki/Install#requirements).
 
+Para gerar e conferir localmente o HTML publicado no GitHub Pages (o mesmo
+pipeline usado no CI), rode:
+
+```
+scripts/preview-local.sh
+```
+
+Requer Docker e GNU sed instalados. Detalhes do pipeline de build em
+[`docs/build/README.md`](docs/build/README.md).
+
 ## 📝 Licença
 
 A tradução do Guia de Estilos do BJCP é open source e pode ser copiada e modificada. Para mais detalhes veja o arquivo [LICENÇA](LICENSE.md).
