@@ -1,0 +1,46 @@
+name: "[Piloto] Build Docusaurus"
+
+# Piloto avaliando Docusaurus como alternativa ao pandoc+sed pra gerar a
+# versão web do guia. Só builda e sobe como artifact pra inspeção manual —
+# NÃO faz deploy pro GitHub Pages (que continua servindo o resultado de
+# update-doc.yml a partir da main). Ver website/README.md para o plano de
+# promover isso a deploy de verdade.
+on:
+  push:
+    branches: ["pilot/docusaurus"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+          cache-dependency-path: website/package-lock.json
+
+      - name: Gerar Markdown a partir dos .tex (fonte original)
+        run: node website/scripts/generate-docs.mjs
+
+      - name: Instalar dependências
+        working-directory: website
+        run: npm ci
+
+      - name: Build do site
+        working-directory: website
+        run: npm run build
+
+      - name: Upload do build como artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: docusaurus-build
+          path: website/build
+          retention-days: 14
