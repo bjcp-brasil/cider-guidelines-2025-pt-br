@@ -5,7 +5,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 const config = {
   title: 'Guia de Estilos de Sidra BJCP - 2025',
   tagline: 'Diretrizes de Estilo de Sidra do BJCP - Tradução PT-BR',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/bjcp-logo.png',
 
   future: {
     v4: true,
