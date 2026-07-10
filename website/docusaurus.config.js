@@ -68,6 +68,11 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       image: 'img/bjcp-logo.png',
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
       colorMode: {
         respectPrefersColorScheme: true,
       },
